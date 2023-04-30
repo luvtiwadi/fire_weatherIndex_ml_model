@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forest Fire Report</title>
+    </head>
+    <body>
+        <div class="header">
+        <h1 style="text-align: center;"> Forest Fire index</h1>
+    </div>
+        <br>
+        <label style="margin-left: 2cm; font-size: 0.7cm;">Enter the Parameters</label>
+        <br>
+        <div class="inputs">
+          <form action='/predict' method="POST">
+            <input type="text" name="temperature" id="temp" placeholder="Enter Temperature" >
+            <input type="text" name="rh" id="rh" placeholder="Enter Relative humidity" >
+            <input type="text" name="ws" id="ws" placeholder="Enter wind speed" >
+            <input type="text" name="rain" id="rain" placeholder="Enter Rain" >
+            <input type="text" name="ffmc" id="ffmc" placeholder="Enter Fine fuel moisture code" >
+            <input type="text" name="dmc" id="dmc" placeholder="Enter duff moisture code" >
+            <input type="text" name="dc" id="dc" placeholder="Enter drought code" >
+            <input type="text" name="isi" id="isi" placeholder="Enter Initial Spread index" >
+            <input type="text" name="bui" id="bui" placeholder="Enter Buildup index" >
+            <input type="text" name="classes" id="classes" placeholder="Enter Class" >
+            <input type="text" name="region" id="region" placeholder="Enter region" >
+        
+                <br>
+                <br><br><br>
+                <button style="margin: 0 500px;">Predict</button>
+          </form>
+
+        </div>
+       <h3> The FWI(Fire Weather Index) {{result}} </h3>
+
+    </body>
+</html>
